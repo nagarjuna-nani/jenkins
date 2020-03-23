@@ -6,9 +6,9 @@
 
 - name: add repo
   apt_repository:
-    repo: echttps://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
+    repo: echttps://pkg.jenkins.io/debian-stable binary/ 
     state: present
-    
+
 - name: update
   apt:
    update_cache: yes
