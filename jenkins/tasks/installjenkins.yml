@@ -5,9 +5,7 @@
    state: present
 
 - name: add repo
-  apt_repository:
-    repo: 'deb https://pkg.jenkins.io/debian-stable binary/' 
-    state: present
+  command: echo deb https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
 
 - name: update
   apt:
